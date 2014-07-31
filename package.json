@@ -1,0 +1,7 @@
+{
+	"name": "ahk-mod-database",
+	"version": "1.0.0",
+	"dependencies" : {
+		"tedious" : "*"
+	}
+}

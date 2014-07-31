@@ -1,0 +1,5 @@
+{
+	"main" : "DatabaseModule.js",
+	"deps": [],
+	"enableAuth" : true
+}

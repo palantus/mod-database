@@ -118,6 +118,13 @@ DatabaseModule.prototype.onTabelsAdded = function(moduleName){
 	else
 		DB = require("./drivers/sqlite3.js")
 	*/
+
+	if(typeof(fw.config.DatabaseDriver) !== "string"){
+		console.error("ERROR: No database driver specified")
+		throw error("Unable to start database module");
+	}
+
+
 	DB = require("./drivers/" + fw.config.DatabaseDriver);
 		
 	db = new DB(fw.config);

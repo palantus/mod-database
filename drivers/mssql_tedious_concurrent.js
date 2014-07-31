@@ -204,6 +204,11 @@ function DatabaseHandler(_config){
 		t.runNextQuery();
 	}, 100);
 
+	if(typeof(this.config.DatabaseUsername) !== "string" || typeof(this.config.DatabasePassword) !== "string" || typeof(this.config.DatabaseServer) !== "string" || typeof(this.config.Database) !== "string"){
+		console.error("ERROR: You must fill all database connection info.")
+		throw error("Unable to start database module");
+	}
+
 	console.log("DatabaseHandler: initialized");
 }
 
